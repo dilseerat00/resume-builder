@@ -1,84 +1,88 @@
 export const landingPageStyles = {
   // Main container
-  container: "min-h-screen bg-gradient-to-br from-slate-50 via-white to-violet-50",
+  container: "min-h-screen bg-gradient-to-br from-emerald-50 via-white to-green-100 font-raleway tracking-wide",
 
   // Header styles
-  header: "fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-violet-100/50",
+  header: "fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-emerald-100/60 font-raleway tracking-wide",
   headerContainer: "max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center",
-  logoContainer: "flex items-center gap-3",
-  logoIcon: "w-10 h-10 bg-gradient-to-br from-violet-600 to-fuchsia-600 rounded-2xl flex items-center justify-center shadow-lg shadow-violet-200",
-  logoIconInner: "w-5 h-5 text-white",
-  logoText: "text-xl sm:text-2xl font-black bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent",
-  mobileMenuButton: "md:hidden p-2 rounded-xl hover:bg-violet-50 transition-colors",
-  mobileMenuIcon: "text-violet-600",
+
+  // Logo area
+  logoContainer: "flex items-center space-x-2",
+  logoIcon: "w-10 h-10 border-2 border-emerald-600 rounded-md flex items-center justify-center bg-white shadow-md",
+  logoIconInner: "w-5 h-5 text-emerald-600", // use a subtle SVG or initials here,
+  logoText: "text-2xl sm:text-[26px] font-extrabold tracking-wide text-emerald-700 font-raleway italic",
+
+
+  // Mobile menu
+  mobileMenuButton: "md:hidden p-2 rounded-xl hover:bg-emerald-50 transition-colors font-raleway tracking-wide",
+  mobileMenuIcon: "text-emerald-600",
 
   // Auth buttons
-  desktopAuthButton: "relative group px-6 sm:px-8 py-2 sm:py-3 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-bold rounded-2xl overflow-hidden transition-all hover:scale-105 hover:shadow-xl hover:shadow-violet-200",
-  desktopAuthButtonText: "relative",
-  desktopAuthButtonOverlay: "absolute inset-0 bg-gradient-to-r from-fuchsia-600 to-violet-600 opacity-0 group-hover:opacity-100 transition-opacity",
-  mobileAuthButton: "w-full px-6 py-3 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-bold rounded-2xl",
+  desktopAuthButton: "relative group px-6 sm:px-8 py-2 sm:py-3 bg-gradient-to-r from-emerald-600 to-teal-500 text-white font-semibold tracking-wide font-raleway rounded-2xl overflow-hidden transition-all hover:scale-105 hover:shadow-xl hover:shadow-emerald-200",
+  desktopAuthButtonText: "relative text-sm sm:text-base font-medium font-raleway",
+  desktopAuthButtonOverlay: "absolute inset-0 bg-gradient-to-r from-teal-500 to-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity",
+  mobileAuthButton: "w-full px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-500 text-white font-semibold font-raleway tracking-wide rounded-2xl",
 
   // Mobile menu
-  // Mobile menu
-  // Mobile menu
-  mobileMenu: "md:hidden bg-white/95 backdrop-blur-lg w-full fixed top-16 left-0 right-0 z-40 shadow-lg border-b border-violet-100/50 transition-all duration-300 ease-in-out",
+  mobileMenu: "md:hidden bg-white/95 backdrop-blur-lg w-full fixed top-16 left-0 right-0 z-40 shadow-lg border-b border-emerald-100/60 transition-all duration-300 ease-in-out font-raleway tracking-wide",
   mobileMenuContainer: "max-w-6xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4",
   mobileUserInfo: "flex flex-col gap-4 py-2",
-  mobileUserWelcome: "text-violet-700 font-medium text-center py-2 text-base sm:text-lg",
-  mobileDashboardButton: "w-full px-6 py-3 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-bold rounded-xl hover:shadow-lg hover:shadow-violet-200/50 transition-all",
-  mobileAuthButton: "w-full px-6 py-3 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-bold rounded-xl hover:shadow-lg hover:shadow-violet-200/50 transition-all",
+  mobileUserWelcome: "text-emerald-700 font-medium text-center py-2 text-base sm:text-lg font-raleway tracking-wide",
+  mobileDashboardButton: "w-full px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-500 text-white font-semibold rounded-2xl hover:shadow-lg hover:shadow-emerald-200/60 transition-all font-raleway tracking-wide",
+  mobileAuthButton: "w-full px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-500 text-white font-semibold rounded-2xl hover:shadow-lg hover:shadow-emerald-200/60 transition-all font-raleway tracking-wide",
+
+
   // Main content
   main: "pt-24",
 
   // Hero section
-  heroSection: "max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20",
-  heroGrid: "flex flex-wrap justify-between gap-10 lg:gap-12 items-center",
-  heroLeft: "space-y-8",
-  tagline: "inline-flex items-center gap-2 sm:gap-3 px-4 py-2 bg-gradient-to-r from-violet-100 to-fuchsia-100 border border-violet-200 text-violet-700 rounded-full font-bold text-xs sm:text-sm",
-  heading: "text-4xl sm:text-6xl lg:text-8xl font-black leading-tight",
-  headingText: "block text-slate-900",
-  headingGradient: "block bg-gradient-to-r from-violet-600 via-fuchsia-600 to-orange-500 bg-clip-text text-transparent",
-  description: "text-base sm:text-lg lg:text-xl text-slate-600 leading-relaxed max-w-lg font-medium",
+  heroSection: "max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-24",
+  heroGrid: "flex flex-wrap justify-between items-center gap-8 lg:gap-16",
+  heroLeft: "space-y-6",
+  tagline: "text-sm sm:text-base font-semibold text-emerald-700 border-l-4 border-emerald-500 pl-4 italic tracking-wide font-raleway",
+  heading: "text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-emerald-700 font-raleway",
+  headingText: "block text-emerald-800",
+  headingGradient: "block bg-gradient-to-r from-emerald-600 via-teal-500 to-emerald-700 bg-clip-text text-transparent",
+  description: "text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed max-w-2xl font-raleway font-medium",
   ctaButtons: "flex flex-col sm:flex-row gap-4",
 
-  // Buttons
-  primaryButton: "group relative px-10 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-bold rounded-2xl overflow-hidden transition-all hover:scale-105 hover:shadow-2xl hover:shadow-violet-200",
-  primaryButtonOverlay: "absolute inset-0 bg-gradient-to-r from-fuchsia-600 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity",
+
+
+  // Buttons 
+  primaryButton: "group relative px-10 py-4 bg-gradient-to-r from-emerald-600 to-teal-500 text-white font-bold rounded-xl rounded-bl-[40px] rounded-tr-[40px] overflow-hidden transition-all hover:scale-105 hover:shadow-2xl hover:shadow-emerald-200",
+  primaryButtonOverlay: "absolute inset-0 bg-gradient-to-r from-teal-500 to-lime-400 opacity-0 group-hover:opacity-100 transition-opacity",
   primaryButtonContent: "relative flex items-center gap-2 sm:gap-3",
   primaryButtonIcon: "group-hover:translate-x-1 transition-transform",
-  secondaryButton: "px-8 sm:px-10 py-3 sm:py-4 border-2 border-violet-200 text-violet-700 font-bold rounded-2xl hover:border-violet-300 hover:bg-violet-50 transition-all",
+  secondaryButton: "mt-4 px-10 py-4 border-2 border-emerald-400 text-emerald-700 font-bold rounded-xl rounded-bl-[40px] rounded-tr-[40px] bg-white hover:border-emerald-500 hover:bg-emerald-50 transition-all shadow-sm text-sm sm:text-base",
 
-  // Stats
-  statsContainer: "flex flex-wrap sm:flex-nowrap items-center gap-6 sm:gap-8 pt-6",
-  statItem: "text-center",
-  statNumber: "text-2xl sm:text-3xl lg:text-4xl font-black bg-gradient-to-r bg-clip-text text-transparent",
-  statLabel: "text-xs sm:text-sm text-slate-500 font-medium",
+  // Hero illustration// Hero Illustration (Green Theme + Custom Shapes + Right Aligned)
+heroIllustration: "absolute right-0 top-1/4 transform translate-x-1/4 w-36 sm:w-48 lg:w-56 z-10",
+heroIllustrationContainer: "relative",
 
-  // Hero illustration
-  heroIllustration: "relative w-full max-w-sm sm:max-w-md lg:max-w-lg mx-auto",
-  heroIllustrationBg: "absolute -inset-8 bg-gradient-to-r from-violet-200/50 to-fuchsia-200/50 rounded-3xl blur-3xl",
-  heroIllustrationContainer: "relative",
+heroIllustrationBg: "absolute inset-0 bg-gradient-to-tr from-emerald-200/30 to-teal-300/30 clip-hexagon animate-pulse shadow-xl",
 
-  // SVG styles
-  svgContainer: "w-full h-auto max-w-md mx-auto",
-  svgRect: "fill-[url(#cardGradient)] stroke-[#e2e8f0] stroke-[2]",
-  svgCircle: "fill-[url(#bgGradient)]",
-  svgRectPrimary: "fill-[#8b5cf6]",
-  svgRectSecondary: "fill-[#d946ef]",
-  svgRectLight: "fill-[#e2e8f0]",
-  svgRectSkill: "fill-[#ddd6fe]",
-  svgAnimatedCircle: "fill-[#f97316] opacity-80",
-  svgAnimatedRect: "fill-[#10b981] opacity-80",
-  svgAnimatedPolygon: "fill-[#ef4444] opacity-80",
+// SVG styles with custom green accents and angular geometry
+svgContainer: "w-full h-auto max-w-xs mx-auto",
+svgRect: "fill-[url(#greenHexGradient)] stroke-[#a7f3d0] stroke-[1.5]",
+svgCircle: "fill-none", // removed for clean edges
+svgRectPrimary: "fill-[#059669]", // emerald-600
+svgRectSecondary: "fill-[#14b8a6]", // teal-500
+svgRectLight: "fill-[#d1fae5]", // emerald-100
+svgRectSkill: "fill-[#99f6e4]", // teal-100
+svgAnimatedCircle: "fill-[#34d399] opacity-80", // emerald-400 (animated)
+svgAnimatedRect: "fill-[#10b981] opacity-90 animate-bounce", // emerald-500
+svgAnimatedPolygon: "fill-[#2dd4bf] opacity-90 animate-spin-slow", // teal-400
 
-  // Features section
-  featuresSection: "bg-gradient-to-br from-violet-50 to-fuchsia-50 py-16 sm:py-24",
+
+    // Features section
+  featuresSection: "bg-gradient-to-br from-emerald-50 to-teal-50 py-16 sm:py-24",
   featuresContainer: "max-w-6xl mx-auto px-4 sm:px-6 lg:px-8",
   featuresHeader: "text-center mb-12 sm:mb-20",
-  featuresTitle: "text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 mb-4 sm:mb-6",
-  featuresTitleGradient: "bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent",
-  featuresDescription: "text-base sm:text-lg text-slate-600 max-w-2xl mx-auto font-medium",
-  featuresGrid: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8",
+  featuresTitle: "text-3xl sm:text-4xl lg:text-5xl font-extrabold text-emerald-900 mb-4 sm:mb-6",
+  featuresTitleGradient: "bg-gradient-to-r from-emerald-600 via-teal-500 to-lime-500 bg-clip-text text-transparent",
+  featuresDescription: "text-base sm:text-lg text-emerald-700 max-w-2xl mx-auto font-medium",
+  featuresGrid: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-10",
+
 
   // Feature cards
   featureCard: "group relative",
@@ -124,41 +128,41 @@ export const dashboardStyles = {
 
   // Header
   headerWrapper: "flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6",
-  headerTitle: "text-2xl font-bold text-gray-900",
-  headerSubtitle: "text-gray-600",
+  headerTitle: "text-2xl font-bold text-emerald-900",
+  headerSubtitle: "text-teal-700",
 
   // Create Button
-  createButton: "group relative px-10 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-bold rounded-2xl overflow-hidden transition-all hover:scale-105 hover:shadow-2xl hover:shadow-violet-200",
-  createButtonOverlay: "absolute inset-0 bg-gradient-to-r from-fuchsia-600 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity",
+  createButton: "group relative px-10 py-4 bg-gradient-to-r from-emerald-600 to-teal-500 text-white font-bold rounded-2xl overflow-hidden transition-all hover:scale-105 hover:shadow-2xl hover:shadow-emerald-200",
+  createButtonOverlay: "absolute inset-0 bg-gradient-to-r from-teal-500 to-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity",
   createButtonContent: "relative flex items-center gap-3",
 
   // Loading
   spinnerWrapper: "flex justify-center items-center py-12",
-  spinner: "animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-violet-600",
+  spinner: "animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-emerald-600",
 
   // Empty State
   emptyStateWrapper: "flex flex-col items-center justify-center py-12 text-center",
-  emptyIconWrapper: "bg-violet-100 p-4 rounded-full mb-4",
-  emptyTitle: "text-xl font-bold text-gray-900 mb-2",
-  emptyText: "text-gray-600 max-w-md mb-6",
+  emptyIconWrapper: "bg-emerald-100 p-4 rounded-full mb-4",
+  emptyTitle: "text-xl font-bold text-emerald-800 mb-2",
+  emptyText: "text-teal-600 max-w-md mb-6",
 
   // Grid
   grid: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6",
 
   // New Resume Card
-  newResumeCard: "flex flex-col items-center justify-center bg-gradient-to-br from-violet-50 to-blue-50 border-2 border-dashed border-violet-300 rounded-2xl p-6 cursor-pointer transition-all hover:shadow-lg hover:border-violet-500 h-full",
-  newResumeIcon: "w-16 h-16 rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-600 flex items-center justify-center mb-4",
-  newResumeTitle: "text-xl font-bold text-gray-900 mb-2 text-center",
-  newResumeText: "text-gray-600 text-center",
+  newResumeCard: "flex flex-col items-center justify-center bg-gradient-to-br from-emerald-50 to-teal-50 border-2 border-dashed border-emerald-300 rounded-2xl p-6 cursor-pointer transition-all hover:shadow-lg hover:border-emerald-500 h-full",
+  newResumeIcon: "w-16 h-16 rounded-full bg-gradient-to-r from-emerald-600 to-teal-500 flex items-center justify-center mb-4",
+  newResumeTitle: "text-xl font-bold text-emerald-900 mb-2 text-center",
+  newResumeText: "text-teal-600 text-center",
 
   // Modal
   modalHeader: "flex justify-between items-center mb-4",
-  modalTitle: "text-xl font-bold text-gray-900",
+  modalTitle: "text-xl font-bold text-emerald-900",
   modalCloseButton: "text-gray-500 hover:text-gray-700",
 
   // Delete Confirmation
   deleteIconWrapper: "bg-red-100 p-3 rounded-full mb-4",
-  deleteTitle: "text-lg font-bold text-gray-900 mb-2",
+  deleteTitle: "text-lg font-bold text-red-700 mb-2",
   deleteText: "text-gray-600 mb-4",
 };
 
@@ -227,22 +231,24 @@ export const cardStyles = {
 };
 
 export const authStyles = {
-  container: "w-[90vw] md:w-[400px] p-8 bg-gradient-to-br from-white to-violet-50 rounded-3xl border border-violet-100 shadow-2xl",
+  container: "w-[90vw] md:w-[400px] p-8 bg-gradient-to-br from-white to-emerald-50 rounded-3xl border border-emerald-100 shadow-2xl",
   headerWrapper: "text-center mb-8",
   title: "text-2xl font-black text-slate-900 mb-2",
   subtitle: "text-slate-600 font-medium",
   form: "space-y-6",
   errorMessage: "text-red-500 text-sm font-medium bg-red-50 border border-red-200 px-4 py-3 rounded-xl",
-  submitButton: "w-full py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-black rounded-2xl hover:scale-105 hover:shadow-xl hover:shadow-violet-200 transition-all text-lg",
+  submitButton: "w-full py-4 bg-gradient-to-r from-emerald-600 to-teal-500 text-white font-black rounded-2xl hover:scale-105 hover:shadow-xl hover:shadow-emerald-200 transition-all text-lg",
   switchText: "text-center text-sm text-slate-600 font-medium",
-  switchButton: "font-black text-violet-600 hover:text-fuchsia-600 transition-colors",
-  signupContainer: "w-[90vw] md:w-[400px] p-8 bg-gradient-to-br from-white to-rose-50 rounded-3xl border border-rose-100 shadow-2xl overflow-hidden",
+  switchButton: "font-black text-emerald-600 hover:text-teal-600 transition-colors",
+
+  signupContainer: "w-[90vw] md:w-[400px] p-8 bg-gradient-to-br from-white to-emerald-50 rounded-3xl border border-emerald-100 shadow-2xl overflow-hidden",
   signupTitle: "text-2xl font-black text-slate-900 mb-2",
   signupSubtitle: "text-slate-600 font-medium",
   signupForm: "space-y-4",
-  signupSubmit: "w-full py-4 bg-gradient-to-r from-rose-500 to-pink-600 text-white font-black rounded-2xl hover:scale-105 hover:shadow-xl hover:shadow-rose-200 transition-all text-lg",
-  signupSwitchButton: "font-black text-rose-600 hover:text-pink-600 transition-colors"
+  signupSubmit: "w-full py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-black rounded-2xl hover:scale-105 hover:shadow-xl hover:shadow-teal-200 transition-all text-lg",
+  signupSwitchButton: "font-black text-emerald-600 hover:text-teal-600 transition-colors"
 };
+
 
 export const shimmerStyle = `
   @keyframes shimmer {
@@ -421,68 +427,81 @@ export const titleInputStyles = {
 };
 
 export const modalStyles = {
-  overlay: "fixed inset-0 flex items-center justify-center w-full h-full bg-black/60 backdrop-blur-sm z-50",
-  container: "relative flex flex-col bg-white/95 backdrop-blur-xl shadow-2xl rounded-3xl overflow-hidden border border-violet-100 max-w-[95vw] max-h-[95vh]",
-  header: "flex items-center justify-between p-6 border-b border-violet-100 bg-gradient-to-r from-white to-violet-50",
-  title: "text-xl font-black text-slate-900",
-  actionButton: "flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-bold rounded-xl hover:scale-105 transition-all shadow-lg mr-12",
-  closeButton: "absolute top-4 right-4 w-10 h-10 flex items-center justify-center bg-white/80 hover:bg-red-50 text-slate-400 hover:text-red-500 rounded-xl transition-all shadow-lg hover:scale-110 z-10",
-  body: "flex-1 overflow-y-auto"
+  overlay:
+    "fixed inset-0 flex items-center justify-center w-full h-full bg-black/50 backdrop-blur-sm z-50",
+
+  container:
+    "relative flex flex-col bg-white/95 backdrop-blur-xl shadow-2xl rounded-3xl overflow-hidden border border-emerald-100 max-w-[95vw] max-h-[95vh]",
+
+  header:
+    "flex items-center justify-between p-6 border-b border-emerald-100 bg-gradient-to-r from-white to-emerald-50",
+
+  title:
+    "text-xl sm:text-2xl font-black text-slate-900 bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-teal-400",
+
+  actionButton:
+    "flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-400 text-white font-bold rounded-xl hover:scale-105 transition-all shadow-lg",
+
+  closeButton:
+    "absolute top-4 right-4 w-10 h-10 flex items-center justify-center bg-white/80 hover:bg-emerald-50 text-slate-400 hover:text-red-500 rounded-xl transition-all shadow-md hover:scale-110 z-10",
+
+  body: "flex-1 overflow-y-auto px-6 py-4 text-gray-800",
 };
+
 
 export const infoStyles = {
   // Progress
-  progressWrapper: "w-20 h-2 rounded-full bg-gray-200",
-  progressBar: color => `h-full rounded-full transition-all`,
+  progressWrapper: "w-24 h-2.5 rounded-full bg-emerald-100 shadow-inner",
+  progressBar: (color) => `h-full rounded-full transition-all bg-${color}-500`,
 
   // ActionLink
-  actionWrapper: "flex items-center gap-3",
-  actionIconWrapper: "w-6 h-6 flex items-center justify-center rounded-full",
-  actionLink: "text-sm font-medium underline cursor-pointer break-all text-gray-600 hover:text-emerald-600 transition-colors",
+  actionWrapper: "flex items-center gap-3 mt-2",
+  actionIconWrapper: "w-6 h-6 flex items-center justify-center rounded-full bg-emerald-100 text-emerald-600",
+  actionLink: "text-sm font-medium underline cursor-pointer break-all text-emerald-700 hover:text-emerald-800 transition-all",
 
   // CertificationInfo
-  certContainer: "mb-4",
-  certTitle: "text-base font-semibold text-gray-900",
+  certContainer: "mb-6 bg-emerald-50 p-4 rounded-xl shadow-sm",
+  certTitle: "text-lg font-semibold text-emerald-900",
   certRow: "flex items-center gap-2 mt-1",
-  certYear: bgColor => `text-xs font-bold text-white px-3 py-1 rounded-lg`,
-  certIssuer: "text-sm text-gray-600 font-medium",
+  certYear: (bgColor) => `text-xs font-bold text-white px-3 py-1 rounded-lg bg-${bgColor}-600`,
+  certIssuer: "text-sm text-emerald-700 font-medium",
 
   // ContactInfo
-  contactRow: "flex items-center gap-3 mb-3",
-  contactIconWrapper: "w-8 h-8 flex items-center justify-center rounded-lg",
-  contactText: "flex-1 text-sm font-medium break-all text-gray-700",
+  contactRow: "flex items-center gap-4 mb-4",
+  contactIconWrapper: "w-9 h-9 flex items-center justify-center rounded-lg bg-emerald-100 text-emerald-700",
+  contactText: "flex-1 text-sm font-medium break-all text-emerald-900",
 
   // EducationInfo
-  eduContainer: "mb-5",
-  eduDegree: "text-base font-semibold pb-2 text-gray-900",
-  eduInstitution: "text-sm text-gray-700 font-medium",
-  eduDuration: "text-xs text-gray-500 font-medium italic mt-1",
+  eduContainer: "mb-6 bg-emerald-50 p-4 rounded-xl shadow-sm",
+  eduDegree: "text-base font-bold text-emerald-900",
+  eduInstitution: "text-sm text-emerald-800 font-medium",
+  eduDuration: "text-xs text-emerald-600 font-medium italic mt-1",
 
   // Language/Skill Info
   infoRow: "flex items-center justify-between mb-3",
-  infoLabel: "text-sm font-semibold text-gray-900",
+  infoLabel: "text-sm font-semibold text-emerald-900",
 
   // Links
-  linkRow: "flex items-center space-x-1 hover:text-blue-600",
+  linkRow: "flex items-center space-x-2 text-sm font-medium text-emerald-600 hover:text-emerald-800 transition-colors",
 
   // ProjectInfo
-  projectContainer: "mb-5",
-  projectTitle: isPreview => `${isPreview ? 'text-sm' : 'text-base'} font-semibold text-gray-900`,
-  projectDesc: "text-sm text-gray-600 mt-1 leading-relaxed",
-  projectLinks: "flex items-center gap-4 font-medium mt-3",
+  projectContainer: "mb-6 bg-emerald-50 p-4 rounded-xl shadow",
+  projectTitle: (isPreview) => `${isPreview ? 'text-sm' : 'text-lg'} font-bold text-emerald-900`,
+  projectDesc: "text-sm text-emerald-700 mt-1 leading-relaxed",
+  projectLinks: "flex items-center gap-4 font-medium mt-3 text-emerald-600",
 
   // RatingInput
   ratingWrapper: "flex gap-2 cursor-pointer",
-  ratingDot: "w-4 h-4 rounded transition-all hover:scale-110",
+  ratingDot: "w-4 h-4 rounded-full transition-all bg-emerald-400 hover:scale-110",
 
   // SkillSection
-  skillGrid: "grid grid-cols-2 gap-x-6 gap-y-2 mb-5",
+  skillGrid: "grid grid-cols-2 gap-x-6 gap-y-3 mb-6",
 
   // InternshipExperience
-  workContainer: "mb-6",
+  workContainer: "mb-6 bg-emerald-50 p-4 rounded-xl shadow-sm",
   workHeader: "flex items-start justify-between mb-2",
-  workCompany: "text-base font-semibold pb-2 text-gray-900",
-  workRole: "text-base font-medium text-gray-700",
-  workDuration: color => `text-sm font-bold italic`,
-  workDesc: "text-sm text-gray-600 font-medium leading-relaxed"
+  workCompany: "text-base font-bold text-emerald-900",
+  workRole: "text-base font-medium text-emerald-800",
+  workDuration: (color) => `text-sm font-bold italic text-${color}-700`,
+  workDesc: "text-sm text-emerald-700 leading-relaxed"
 };

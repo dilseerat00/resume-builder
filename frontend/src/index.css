@@ -6,7 +6,7 @@
 @theme {
     --font-display: "Urbanist", sans-serif;
     --breakpoint-3xl: 1920px;
-    --color-primary: #9328E7
+    --color-primary: #556b2f; /* Emerald-600 */
 }
 
 @layer base {
@@ -26,8 +26,8 @@
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-    background-color: rgba((100, 100, 100, 0.4));
-    border-radius: 10px
+    background-color: rgba(100, 100, 100, 0.4);
+    border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
@@ -35,8 +35,6 @@
 }
 
 @layer utilities {
-    /* Animate text with a shine effect */
-
     @keyframes text-shine {
         0% {
             background-position: 0% 50%;
@@ -52,33 +50,37 @@
     }
 }
 
+/* INPUT BOX */
 .input-box {
-    @apply w-full flex justify-between gap-3 text-sm text-black bg-gray-50/50 rounded px-4 py-3 mb-4 mt-3 border border-gray-100 outline-none focus-within:border-purple-300;
+    @apply w-full flex justify-between gap-3 text-sm text-black bg-gray-50/50 rounded px-4 py-3 mb-4 mt-3 border border-gray-100 outline-none focus-within:border-emerald-300;
 }
 
+/* PRIMARY BUTTON */
 .btn-primary {
-    @apply w-full text-sm font-medium text-white bg-black shadow-lg shadow-purple-600/5 p-[10px] rounded-md my-1 hover:bg-purple-600/15 hover:text-black cursor-pointer;
+    @apply w-full text-sm font-medium text-white bg-black shadow-lg shadow-emerald-600/5 p-[10px] rounded-md my-1 hover:bg-emerald-600/15 hover:text-black cursor-pointer;
 }
 
+/* SMALL BUTTON */
 .btn-small {
-    @apply flex items-center gap-2 text-[13px] font-semibold text-white bg-linear-to-r from-purple-500/8 to-purple-700 px-5 py-1.5 rounded cursor-pointer;
+    @apply flex items-center gap-2 text-[13px] font-semibold text-white bg-gradient-to-r from-emerald-500/80 to-teal-600 px-5 py-1.5 rounded cursor-pointer;
 }
 
+/* LIGHT SMALL BUTTON */
 .btn-small-light {
-    @apply flex items-center gap-2 text-[12px] font-semibold text-purple-800 bg-purple-600/15 border border-purple-50 hover:border-purple-400 px-3 py-1.5 rounded cursor-pointer;
+    @apply flex items-center gap-2 text-[12px] font-semibold text-emerald-800 bg-emerald-100 border border-emerald-200 hover:border-emerald-400 px-3 py-1.5 rounded cursor-pointer;
 }
 
+/* FORM INPUT */
 .form-input {
-    @apply w-full text-sm text-black outline-none bg-white border border-slate-100 px-2.5 py-3 rounded-md mt-2 placeholder:text-gray-500 focus-within:border-purple-300;
+    @apply w-full text-sm text-black outline-none bg-white border border-slate-100 px-2.5 py-3 rounded-md mt-2 placeholder:text-gray-500 focus-within:border-emerald-300;
 }
 
-
+/* FADE-IN ANIMATION */
 @keyframes fade-in {
     from {
         opacity: 0;
         transform: translateY(10px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -90,6 +92,7 @@
     opacity: 0;
 }
 
+/* SPIN ANIMATION */
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -104,6 +107,7 @@
     animation: spin 1s linear infinite;
 }
 
+/* PRINT ONLY RESUME */
 @media print {
     body * {
         visibility: hidden;
