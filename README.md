@@ -89,7 +89,3 @@ resume-builder/
 📧 [Email](mailto:dilseeratjassal@gmail.com)  
 
 ---
-
-## 🌟 Show Your Support
-
-If you like this project, consider ⭐ starring the repo and sharing it with your friends!
