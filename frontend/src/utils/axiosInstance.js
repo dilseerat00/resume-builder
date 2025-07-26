@@ -3,7 +3,7 @@ import {BASE_URL} from './apiPath';
 
 const axiosInstance = axios.create({
     baseURL: BASE_URL,
-    timeout: 10000, // Set timeout to 10 seconds
+    timeout: 30000, // Set timeout to 30 seconds
     headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json',
@@ -13,9 +13,9 @@ const axiosInstance = axios.create({
 // Add a request interceptor
 axiosInstance.interceptors.request.use(
     (config) => {
-        const accessToken = localStorage.getItem('accessToken');
-        if (accessToken) {
-            config.headers['Authorization'] = `Bearer ${accessToken}`;
+        const token = localStorage.getItem('token');
+        if (token) {
+            config.headers['Authorization'] = `Bearer ${token}`;
         }
         return config;
     },

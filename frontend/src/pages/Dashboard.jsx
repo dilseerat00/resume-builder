@@ -37,7 +37,7 @@ const Dashboard = () => {
         if (resume.contactInfo?.address) completedFields++;
 
         // Internship Experience
-        resume.internshipExperience?.forEach(exp => {
+        resume.workExperience?.forEach(exp => {
             totalFields += 5;
             if (exp.companyName) completedFields++;
             if (exp.role) completedFields++;
@@ -48,11 +48,12 @@ const Dashboard = () => {
 
         // Education
         resume.education?.forEach(edu => {
-            totalFields += 4;
+            totalFields += 5;
             if (edu.institution) completedFields++;
             if (edu.degree) completedFields++;
             if (edu.startDate) completedFields++;
             if (edu.endDate) completedFields++;
+            if (edu.cgpa) completedFields++;
         });
 
         // Skills
@@ -133,7 +134,7 @@ const Dashboard = () => {
             }
             finally{
                 setResumeToDelete(null)
-                setshowDeleteConfirm(false)
+                setShowDeleteConfirm(false)
             }    
         }
 
@@ -217,7 +218,7 @@ const Dashboard = () => {
                             onDelete={()=> handleDeleteClick(resume._id)}
                             completion={resume.completion || 0 }
                             isPremium= {resume.isPremium}
-                            isNew= {moment().diff(moment(resume.createdAt), 'days'<7)}
+                            isNew= {moment().diff(moment(resume.createdAt), 'days')<7}
                            
                             />
                         )
@@ -251,7 +252,7 @@ const Dashboard = () => {
 
             
             {/*Delete Modal */}
-            <Modal isOpen= {showDeleteConfirm} onClose={()=> showDeleteConfirm(false)} title='Confirm Deletion'
+            <Modal isOpen= {showDeleteConfirm} onClose={()=> setShowDeleteConfirm(false)} title='Confirm Deletion'
             showActionBtn actionBtnText='Delete' actionBtnClassName='bg-green-600 hover:bg-green-700'
             onActionClick={handleDeleteResume}
             >

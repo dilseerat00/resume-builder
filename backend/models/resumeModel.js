@@ -32,7 +32,7 @@ const resumeSchema = new mongoose.Schema({
     },
 
     //Internship Experience
-    internshipExperience: [{
+    workExperience: [{
         companyName: String,
         role: String,
         startDate: Date,
@@ -45,6 +45,7 @@ const resumeSchema = new mongoose.Schema({
         degree: String,
         startDate: Date,
         endDate: Date,
+        cgpa: String,
     },],
     skills: [{
         name: String,

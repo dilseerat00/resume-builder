@@ -1,46 +1,40 @@
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
+import { Award, TrendingUp, Zap, Edit, Trash2, Clock, Check } from "lucide-react";
 
-import { useContext , useState} from "react";
+import { useContext, useState } from "react";
 import { UserContext } from "../context/userContext";
 import { cardStyles } from "../assets/dummystyle";
 
 //Profile Information Card Component
 export const ProfileInfoCard = () => {
-    const navigate = useNavigate();
-    const { user, clearUser } = useContext(UserContext);
+  const navigate = useNavigate();
+  const { user, clearUser } = useContext(UserContext);
 
-    const handleLogout = () => {
-        // Clear user context and navigate to the landing page
-        localStorage.clear();
-        clearUser();
-        navigate("/");
-    }
+  const handleLogout = () => {
+    // Clear user context and navigate to the landing page
+    localStorage.clear();
+    clearUser();
+    navigate("/");
+  };
 
-    return (
-        user && (
-            <div className={cardStyles.profileCard}>
-                <div className= {cardStyles.profileInitialsContainer}>
-                    <span className= { cardStyles.profileInitialsText}>
-                        {user.name ? user.name.charAt(0).toUpperCase() : ""}
-
-                    </span>
-                </div>
-                <div>
-                    <div className={cardStyles.profileName}>
-                        {user.name || ""}
-
-                    </div>
-                    <button className={cardStyles.logoutButton}>
-                        onClick={handleLogout}
-                        Logout
-                    </button>
-
-                </div>
-
-            </div>
-        )
-    );
-}
+  return (
+    user && (
+      <div className={cardStyles.profileCard}>
+        <div className={cardStyles.profileInitialsContainer}>
+          <span className={cardStyles.profileInitialsText}>
+            {user.name ? user.name.charAt(0).toUpperCase() : ""}
+          </span>
+        </div>
+        <div>
+          <div className={cardStyles.profileName}>{user.name || ""}</div>
+          <button className={cardStyles.logoutButton} onClick={handleLogout}>
+            Logout
+          </button>
+        </div>
+      </div>
+    )
+  );
+};
 
 //Resume Summary
 export const ResumeSummaryCard = ({
@@ -53,7 +47,7 @@ export const ResumeSummaryCard = ({
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  // Created 
+  // Created
   const formattedCreatedDate = createdAt
     ? new Date(createdAt).toLocaleDateString("en-US", {
         month: "short",
@@ -62,7 +56,7 @@ export const ResumeSummaryCard = ({
       })
     : "—";
 
-    //Updated
+  //Updated
   const formattedUpdatedDate = updatedAt
     ? new Date(updatedAt).toLocaleDateString("en-US", {
         month: "short",
@@ -71,18 +65,19 @@ export const ResumeSummaryCard = ({
       })
     : "—";
 
-    //Color as per completion
+  //Color as per completion
   const getCompletionColor = () => {
     if (completion >= 90) return "from-emerald-500 to-teal-400";
     if (completion >= 70) return "from-emerald-400 to-teal-300";
     return "from-rose-400 to-orange-300";
   };
 
-
   //Icon as per completion
   const getCompletionIcon = () => {
-    if (completion >= 90) return <Award size={12} className="text-emerald-600" />;
-    if (completion >= 70) return <TrendingUp size={12} className="text-teal-500" />;
+    if (completion >= 90)
+      return <Award size={12} className="text-emerald-600" />;
+    if (completion >= 70)
+      return <TrendingUp size={12} className="text-teal-500" />;
     return <Zap size={12} className="text-yellow-500" />;
   };
 
@@ -112,7 +107,9 @@ export const ResumeSummaryCard = ({
     >
       {/* Completion indicator */}
       <div className="flex items-center gap-1 p-2">
-        <div className={`h-4 w-4 rounded-full bg-gradient-to-r ${getCompletionColor()}`}>
+        <div
+          className={`h-4 w-4 rounded-full bg-gradient-to-r ${getCompletionColor()}`}
+        >
           <div className="h-2 w-2 bg-white rounded-full mx-auto my-auto mt-[3px]" />
         </div>
         <span className="text-xs font-medium text-gray-600">{completion}%</span>
@@ -120,7 +117,9 @@ export const ResumeSummaryCard = ({
       </div>
 
       {/* Preview area */}
-      <div className={`relative h-48 rounded-t-xl bg-gradient-to-br ${designColor}`}>
+      <div
+        className={`relative h-48 rounded-t-xl bg-gradient-to-br ${designColor}`}
+      >
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <div className="bg-white p-3 rounded-full shadow">
             <Edit size={28} className="text-emerald-600" />
@@ -203,10 +202,59 @@ export const ResumeSummaryCard = ({
               ? "Almost There"
               : "Ready to Go!"}
           </span>
-          <span className="text-xs font-bold text-emerald-800">{completion}% Complete</span>
+          <span className="text-xs font-bold text-emerald-800">
+            {completion}% Complete
+          </span>
         </div>
       </div>
     </div>
   );
 };
 
+//Template Card Component
+export const TemplateCard = ({ thumbnailImg, isSelected, onSelect }) => {
+  return (
+    <div
+      className={`group h-auto md:h-[300px] lg:h-[320px] flex flex-col 
+        bg-white border-2 overflow-hidden cursor-pointer 
+        transition-all duration-500 hover:scale-105 hover:shadow-lg rounded-3xl
+        ${
+          isSelected
+            ? "border-emerald-500 shadow-lg shadow-emerald-500/20 bg-emerald-50"
+            : "border-gray-200 hover:border-emerald-300"
+        }`}
+      onClick={onSelect}
+    >
+      {thumbnailImg ? (
+        <div className="relative w-full h-full overflow-hidden">
+          <img
+            src={thumbnailImg || "/placeholder.svg"}
+            alt="Template Review"
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+          />
+
+          <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+          {isSelected && (
+            <div className="absolute inset-0 bg-emerald-500/10 flex items-center justify-center">
+              <div className="w-16 h-16 bg-white backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg animate-pulse">
+                <Check size={24} className="text-emerald-600" />
+              </div>
+            </div>
+          )}
+
+          {/* Hover Effect*/}
+          {/* HOVER EFFECT */}
+          <div className="absolute inset-0 bg-gradient-to-t from-emerald-100/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </div>
+      ) : (
+        <div className="w-full h-[200px] flex items-center flex-col justify-center bg-gradient-to-br from-emerald-50 via-teal-100 to-teal-50">
+          <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mb-3">
+            <Edit className="text-white" size={20} />
+          </div>
+          <span className="text-gray-700 font-bold">No Preview</span>
+        </div>
+      )}
+    </div>
+  );
+};

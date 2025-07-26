@@ -20,6 +20,8 @@ connectDB();
 
 // Middleware
 app.use(express.json());
+//app.use(express.urlencoded({ extended: true, limit: '50mb' }));
+
 app.use('/api/auth',userRoutes)
 app.use('/api/resume', resumeRouter);  
 

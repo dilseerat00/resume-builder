@@ -1,5 +1,5 @@
 import React from 'react'
-import { buttonStyles, modalStyles as styles} from '../assets/dummystyle'
+import {buttonStyles, modalStyles as styles} from '../assets/dummystyle'
 import {X} from 'lucide-react'
 
 
@@ -10,11 +10,17 @@ const Modal = (
 ) => {
     if (!isOpen) return null;
     return (  
+        
         <div className={styles.overlay}>
+            
             <div className={styles.container}>
+
                 {!hideHeader && (
                     <div className={styles.header}>
+                        
+                        
                         <h2 className={styles.title}>{title}</h2>
+                        
 
                         {showActionBtn &&
                         (
@@ -23,8 +29,13 @@ const Modal = (
                                 {actionBtnText}
                             </button>
                         )}
+
                     </div>
                 )}
+               <div className="max-h-[70vh] overflow-y-auto p-4">
+          {children}
+        </div>
+
 
                 <button type="button" className={styles.closeButton} onClick={onClose}>
                     <X size={20}/>

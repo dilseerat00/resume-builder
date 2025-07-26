@@ -4,6 +4,7 @@ import jwt from "jsonwebtoken";
 export const protect = async (req, res, next) => {
     try{
         let token;
+        console.log("Headers:", req.headers);
 
         // Check if token is present in headers
         if (req.headers.authorization&& req.headers.authorization.startsWith("Bearer")) {
@@ -18,11 +19,12 @@ export const protect = async (req, res, next) => {
             next();
         }
          else {
-        res.status(401).json({ message: "No token provided" });
+            console.error("No token provided");
+            return res.status(401).json({ message: "Not authorized, no token" });
         }
     }
         catch (error) {
-            res.status(401).json({ message: "Not authorized, token failed" ,
+            return res.status(401).json({ message: "Not authorized, token failed" ,
             error: error.message
             });
         }
