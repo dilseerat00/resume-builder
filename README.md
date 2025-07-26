@@ -85,8 +85,8 @@ resume-builder/
 ## ✍️ Author
 
 **Dilseerat Kaur**  
-📬 [LinkedIn](https://www.linkedin.com/in/dilseerat00)  
-📧 dilseeratjassal@gmail.com  
+📬 [LinkedIn](https://www.linkedin.com/in/dilseerat-kaur-9502702b0/)  
+📧 [Email](dilseeratjassal@gmail.com)  
 
 ---
 
